@@ -14,6 +14,12 @@ formEl.addEventListener('submit', function (event) {
     });
     formEl.reset();
     localStorage.removeItem('feedback-form-state');
+    inputObj.email = '';
+    inputObj.message = '';
+
+    alert('Thanks for your feedback!');
+  } else if (inputEmailEl.value || textareaMessageEl.value) {
+    alert('Please fill in all fields.');
   }
 });
 
